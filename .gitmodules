@@ -1,0 +1,3 @@
+[submodule "veld_code__udpipe"]
+	path = veld_code__udpipe
+	url = https://github.com/veldhub/veld_code__udpipe.git
