@@ -1,0 +1,10 @@
+
+services:
+  veld_step_1_preprocess:
+    build: ./code/veld_step_1/
+    command: python preprocess.py
+    working_dir: /veld/code/
+    volumes:
+      - ./data/input/texts/:/veld/input/
+      - ./data/input/texts/:/veld/output/
+      - ./code/veld_step_1/:/veld/code/
