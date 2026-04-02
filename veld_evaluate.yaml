@@ -1,0 +1,25 @@
+x-veld:
+  chain:
+
+services:
+  #veld_evaluate_direct:
+  #  extends:
+  #    file: ./veld_code__udpipe/veld_udpipe_2_infer_direct.yaml
+  #    service: veld_udpipe_2_infer_direct
+  #  command: python -u udpipe2_direct.py /veld/input/model/udpipe2-ud-2.10-220711/de_hdt-ud-2.10-220711.model/ de_hdt
+  #  volumes:
+  #    - ./data/input/model/:/veld/input/model/
+  #    - ./data/input/txt/131_testudpipevert_subset/:/veld/input/txt/
+  #    - ./data/output/131_testudpipevert_subset/:/veld/output/
+  #    #- ./data/input/txt/test/:/veld/input/txt/
+  #    #- ./data/output/test/:/veld/output/
+
+  veld_evaluate_server:
+    extends:
+      file: ./veld_code__udpipe/veld_udpipe_2_infer_server.yaml
+      service: veld_udpipe_2_infer_server
+    volumes:
+      - ./data/input/model/:/veld/input/model/
+      - ./data/input/txt/131_testudpipevert_subset/:/veld/input/txt/
+      - ./data/output/131_testudpipevert_subset/:/veld/output/
+
