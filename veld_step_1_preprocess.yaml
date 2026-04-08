@@ -5,6 +5,6 @@ services:
     command: python preprocess.py
     working_dir: /veld/code/
     volumes:
-      - ./data/input/texts/:/veld/input/
-      - ./data/input/texts/:/veld/output/
+      - ./data/step_0/:/veld/input/
+      - ./data/step_1/:/veld/output/
       - ./code/step_1/:/veld/code/

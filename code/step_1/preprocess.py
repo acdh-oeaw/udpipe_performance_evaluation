@@ -4,7 +4,7 @@ import nltk
 from nltk.tokenize import sent_tokenize
 
 
-with open("/veld/input/step_0_test.txt", "r") as f:
+with open("/veld/input/test.txt", "r") as f:
     text = f.read()
 text = re.sub(r"\s+", " ", text)
 sentence_list = sent_tokenize(text, "german")
@@ -14,6 +14,6 @@ for sentence in sentence_list:
     text_output += "\n"
     for token in token_list:
         text_output += token + "\n"
-with open("/veld/output/step_1_test.txt", "w") as f:
+with open("/veld/output/test.txt", "w") as f:
     f.write(text_output)
 
